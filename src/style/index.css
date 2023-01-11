@@ -29,6 +29,11 @@ h1 {
   font-size: 5rem;
 }
 
+h1 img {
+  width: 80px;
+  height: 80px;
+}
+
 p {
   text-align: center;
   color: whitesmoke;
@@ -43,18 +48,19 @@ p {
   background-color: 030712;
 
   background-image: linear-gradient(
-    90deg,
-    rgb(255, 255, 255) 0%,
-    rgb(2, 158, 131) 20%,
-    rgb(0, 105, 115) 40%,
-    rgb(0, 50, 54) 60%,
-    rgb(6, 54, 72) 70%,
-    rgb(0, 0, 0) 100%
+    110deg,
+    #ffffff 0%,
+    #029e83 20%,
+    #006973 40%,
+    #003236 60%,
+    #063648 70%,
+    #000000 100%
   );
   background-size: 100%;
   background-repeat: repeat;
 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
@@ -131,6 +137,7 @@ a {
   background-repeat: repeat;
 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
