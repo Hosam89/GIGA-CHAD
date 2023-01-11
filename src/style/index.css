@@ -66,6 +66,7 @@ p {
   backdrop-filter: blur(60px);
   -webkit-backdrop-filter: blur(7.5px);
   border-radius: 10px;
+  height: 750px;
 }
 
 /* Login form */
