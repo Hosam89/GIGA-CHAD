@@ -1,0 +1,29 @@
+{
+  "name": "giga-chad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hosam89/GIGA-CHAD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hosam89/GIGA-CHAD/issues"
+  },
+  "homepage": "https://github.com/Hosam89/GIGA-CHAD#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "parcel": "^2.8.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2"
+  }
+}
