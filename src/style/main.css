@@ -7,11 +7,13 @@
     margin: 0;
   }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  width: 100vw;
-}
+
+  body {
+    font-family: 'Poppins', sans-serif , FontAwesome;
+    height: 100vh;
+    width: 100vw;
+  }
+
 
 main {
   width: 100%;
@@ -164,6 +166,7 @@ a {
 .menu-button-container {
   display: none;
   height: 100%;
+
   width: 30px;
   margin-right: 20px;
   cursor: pointer;
@@ -316,3 +319,29 @@ a {
   }
 }
 } */
+
+  background: grey;
+  padding-top: 130px;
+  padding-left: 230px;
+}
+
+#search-container{
+  position: relative;
+}
+
+.search-bar{
+  padding: 10px 10px 10px 40px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  width: 250px;
+  border-radius: 12px;
+}
+
+.search-icon{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 20px;
+  color: #aaa;
+}
+
