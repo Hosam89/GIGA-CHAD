@@ -7,267 +7,97 @@
   }
 
   body {
-    background-color: #121212;
     font-family: 'Poppins', sans-serif;
-  }
-  
-  .sidebar-container {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 196px;
-    background-color: #000000;
-    padding: 24px;
+    height: 100vh;
+    width: 100vw;
   }
 
-  .sidebar-container .logo img {
-    width: 130px;
-  }
-
-  .sidebar-container .side-nav ul {
-    list-style: none;
-    margin-top: 20px;
-  }
-
-  .sidebar-container .side-nav ul li {
-    padding: 10px 0px;
-  }
-
-  .sidebar-container .side-nav ul li a {
-    color: #b3b3b3;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 13px;
-  }
-
-  .sidebar-container .side-nav ul li a:hover,
-  .sidebar-container .side-nav ul li a:active,
-  .sidebar-container .side-nav ul li a:focus {
-    color: #ffffff;
-  }
-
-  .sidebar-container .side-nav ul li a:hover .fa,
-  .sidebar-container .side-nav ul li a:active .fa,
-  .sidebar-container .side-nav ul li a:focus .fa {
-    color: #b3b3b3;
-  }
-
-  .sidebar-container .side-nav ul li .fa {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-
-  .sidebar-container .side-nav ul li a:hover .fa:hover,
-  .sidebar-container .side-nav ul li a:hover .fa:active,
-  .sidebar-container .side-nav ul li a:hover .fa:focus {
-    color: #ffffff;
-  }
-
-  .sidebar-container .policies {
-    position: absolute;
-    bottom: 100px;
-  }
-
-  .sidebar-container .policies ul {
-    list-style: none;
-  }
-
-  .sidebar-container .policies ul li {
-    padding-bottom: 5px;
-  }
-
-  .sidebar-container .policies ul li a {
-    color: #b3b3b3;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 10px;
-  }
-
-  .sidebar-container .policies ul li a:hover,
-  .sidebar-container .policies ul li a:active,
-  .sidebar-container .policies ul li a:focus {
-    text-decoration: underline;
-  }
-  
-  .content-container {
-    margin-left: 196px;
-    margin-bottom: 100px;
-  }
-  
-  .topbar-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #101010;
-    padding: 14px 30px;
-  }
-
-  .topbar-container .prev-next-buttons button {
-    color: #7a7a7a;
-    cursor: not-allowed;
-    width: 34px;
-    height: 34px;
-    border-radius: 100%;
-    font-size: 18px;
-    border: 0px;
-    background-color: #090909;
-    margin-right: 10px;
-  }
-
-  .topbar-container .top-nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .topbar-container .top-nav ul {
-    list-style: none;
-  }
-
-  .topbar-container .top-nav ul li {
-    display: inline-block;
-    margin: 0px 8px;
-    width: 70px;
-  }
-
-  .topbar-container .top-nav ul li a {
-    color: #b3b3b3;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  .topbar-container .top-nav ul li a:hover,
-  .topbar-container .top-nav ul li a:active,
-  .topbar-container .top-nav ul li a:focus {
-    color: #ffffff;
-    font-size: 15px;
-  }
-
-  .topbar-container .top-nav ul li.divider {
-    color: #ffffff;
-    font-size: 26px;
-    margin: 0px 20px;
-    width: auto;
-  }
-
-  .topbar-container .top-nav button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 20px;
-  }
-
-  .topbar-container .top-nav button:hover,
-  .topbar-container .top-nav button:active,
-  .topbar-container .top-nav button:focus {
-    background-color: #f2f2f2;
-  }
-
-  .sigma-playlists {
-    padding: 20px 40px;
-  }
-
-  .sigma-playlists h2 {
-    color: #ffffff;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .sigma-playlists .list {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-  }
-
-  .sigma-playlists .list .item {
-    min-width: 140px;
-    width: 160px;
-    padding: 15px;
-    background-color: #181818;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all ease 0.4s;
-  }
-
-  .sigma-playlists .list .item:hover {
-    background-color: #252525;
-  }
-
-  .sigma-playlists .list .item img {
+  main {
     width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    height: 100%;
   }
 
-  .sigma-playlists .list .item .play {
-    position: relative;
-  }
+#sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: black;
+  overflow-x: hidden;
+  padding-top: 100px;
+}
 
-  .sigma-playlists .list .item .play .fa {
-    position: absolute;
-    right: 10px;
-    top: -60px;
-    padding: 18px;
-    background-color: #1db954;
-    border-radius: 100%;
-    opacity: 0;
-    transition: all ease 0.4s;
-  }
+#sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+}
 
-  .sigma-playlists .list .item:hover .play .fa {
-    opacity: 1;
-    transform: translateY(-20px);
-  }
+#sidenav a:hover {
+  color: purple;
+}
 
-  .sigma-playlists .list .item h4 {
-    color: #ffffff;
-    font-size: 14px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
 
-  .sigma-playlists .list .item p {
-    color: #989898;
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 600;
-  }
+#topnav {
+  width: 100%;
+  height: 100px;
+  padding-right: 80px;
+  background: black;
+  position: fixed;
+  right: 0;
+}
 
-  .sigma-playlists hr {
-    margin: 70px 0px 0px;
-    border-color: #636363;
-  }
+#topnav-links {
+  float: right;
+  padding: 16px 16px;
+}
+
+#topnav-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding-right: 20px;
+}
+
+#topnav-links a:last-of-type {
+  margin-right: 200px;
+}
+
+#topnav-links a:hover {
+  color: purple;
+}
 
 
-  .preview h6 {
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+}
 
-  .preview p {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 500;
-  }
+button[type=submit] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 4px;
+  font-size: 17px;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
 
-  .preview button {
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 14px 30px;
-    border: 0px;
-    border-radius: 40px;
-    cursor: pointer;
-  }
+input[type=text], button[type=submit] {
+  border-radius: 8px;
+}
+
+#cards-container {
+  height: 100%;
+  background: grey;
+  padding-top: 100px;
+}
