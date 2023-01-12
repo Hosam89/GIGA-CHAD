@@ -152,22 +152,15 @@
         <br /><br />
         <a class="forgot-pw" href="#">Forgot Passwort?</a>
         <br /><br />
-        <button class="login-button">
-          <a href="/src/pages/main.html">Login</a>
-        </button>
+        <button class="login-button" "><a href="/src/pages/main.html">Login</a></button>
       </form>
     </div>
     <div class="image-container">
       <img class="float-right" src="/src/images/apple.svg" alt="apple_store" />
       <img class="float-left" src="/src/images/google.svg" alt="google_play" />
     </div>
-    <script>
-      window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".loader").style.display = "none";
-          document.querySelector("#loading").style.display = "none";
-        }, 2000);
-      };
-    </script>
+    <script src="/src/script/env.js"></script>
+    <script src="/src/script/fetch.js"></script>
+    <script src="/src/script/loading.js"></script>
   </body>
 </html>
