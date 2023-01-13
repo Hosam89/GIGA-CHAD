@@ -19,9 +19,10 @@
 
   <body>
     <main>
-      <div id="loading">
+      <!-- --- LOADER --- -->
+      <!-- <div id="loading">
         <div class="loader"></div>
-      </div>
+      </div> -->
       <!-- --- SIDENAV START --- -->
       <div id="sidenav">
         <!-- --- SIGMA LOGO START --- -->
@@ -122,7 +123,7 @@
           </svg>
         </div>
         <!-- --- SIGMA LOGO END --- -->
-        <a href="#" id="home" class="active"
+        <a href="main.html" id="home" class="active"
           ><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a
         >
         <a href="#" id="search"
@@ -153,149 +154,92 @@
 
       <!-- --- CONTENT START --- -->
       <div id="cards-container" class="d-flex flex-wrap gap-3">
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+        <!-- --- SONG SECTION START --- -->
+        <section id="song-cards" class="d-none">
+          <div class="card text-center" style="width: 330.3px">
+            <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3>Artist</h3>
+              <h5>Album</h5>
+              <p class="card-text">Song Title</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div class="card text-center" style="width: 330.3px">
+            <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3>Artist</h3>
+              <h5>Album</h5>
+              <p class="card-text">Song Title</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div class="card text-center" style="width: 330.3px">
+            <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3>Artist</h3>
+              <h5>Album</h5>
+              <p class="card-text">Song Title</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div class="card text-center" style="width: 330.3px">
+            <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3>Artist</h3>
+              <h5>Album</h5>
+              <p class="card-text">Song Title</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div class="card text-center" style="width: 330.3px">
+            <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h3>Artist</h3>
+              <h5>Album</h5>
+              <p class="card-text">Song Title</p>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- --- SONG SECTION END --- -->
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
+        <!-- --- ARTIST SECTION START --- -->
+        <section id="artist-cards" class="d-flex flex-wrap gap-3 justify-content-start align-items-start">
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div id="artist" class="card" style="width: 600px">
+            <img id="artist-pic" src="../images/sigma-2.gif" class="card-img-top" alt="current-artist" />
+            <div class="card-body">
+              <h1 id="artist-name">Artist Artist Artist</h1>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
+          <div id="artist-list">
+            <ul id="songlist">
+              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li>
+              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li>
+              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li>
+              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li>
+              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-1.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
+        </section>
+        <!-- --- ARTIST SECTION END --- -->
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
+        <!-- --- ALBUM SECTION START --- -->
+        <section id="album-cards">
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
+        </section>
+        <!-- --- ALBUM SECTION END --- -->
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
 
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
-
-        <div class="card text-center" style="width: 330.3px">
-          <img src="../images/sigma-2.gif" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h3>Artist</h3>
-            <h5>Album</h5>
-            <p class="card-text">Song Title</p>
-          </div>
-        </div>
       </div>
     </main>
     <script
@@ -303,7 +247,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/script/loading.js"></script>
+    <!-- <script src="/src/script/loading.js"></script> -->
     <script src="/src/script/env.js"></script>
     <script src="/src/script/fetch.js"></script>
     <script src="/src/script/index.js"></script>
