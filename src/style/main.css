@@ -7,6 +7,7 @@
   margin: 0;
 }
 
+/* --- MAIN STYLES START --- */
 body {
   font-family: "Poppins", sans-serif, FontAwesome;
   height: 100vh;
@@ -144,6 +145,58 @@ a {
   /* animation: gradient 15s ease infinite; */
   padding: 165px 230px;
 }
+/* --- MAIN STYLES END --- */
+
+/* --- ARTIST SECTION STYLES START --- */
+
+#artist {
+  background: rgb(33, 33, 33);
+  height: 350px;
+}
+
+#artist-pic {
+  width: 250px;
+  border-radius: 50%;
+  padding: 20px 0 0 20px;
+}
+
+#artist-name{
+  font-weight: bold;
+  color: #e2f0ff;
+  padding: 0 0 0 20px;
+}
+
+#songlist {
+  list-style: none;
+  height: 350px;
+}
+
+.songs {
+  width: 330px;
+  
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.songs:hover {
+  background: grey;
+}
+
+.album-pic {
+  width: 60px;
+  margin-bottom: 13px;
+  border-radius: 50%;
+}
+
+
+
+/* --- ARTIST SECTION STYLES END --- */
+
+
+
+
 
 /* @keyframes gradient {
 	0% {
@@ -327,8 +380,9 @@ a {
 }
 } */
 
+/* --- SEARCH PAGE --- */
 #search-container {
-  position: relative;
+  position: absolute;
 }
 
 .search-bar {
@@ -342,11 +396,12 @@ a {
 .search-icon {
   position: absolute;
   top: 15px;
-  left: 10px;
+  left: 15px;
   font-size: 20px;
   color: #aaa;
 }
 
+/* --- LOADING SCREEN ANIMATION --- */
 #loading {
   position: fixed;
   top: 0;
