@@ -348,7 +348,6 @@ main {
   }
 }
 
-
 /* --- TABLET VIEWPORTS --- */
 @media screen and (max-width: 910px) and (min-width: 701px) {
   #artist-cards{
@@ -357,7 +356,7 @@ main {
 
   #artist {
     height: 320px;
-    width: 500px;
+    width: 6000px;
     padding-top: 10px;
   }
 
@@ -385,18 +384,20 @@ main {
   }
 }
 
-@media screen and (max-width: 700px) and (min-width: 501px) {
+
+
+@media screen and (max-width: 670px) and (min-width: 651px) {
   #sidenav {
     width: 200px;
-    font-size: 1.2rem;
   }
 
   #sidenav a:first-of-type {
-    margin-top: 115px;
+    margin-top: 80px;
   }
 
   #sidenav a {
     padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
   }
 
   #mobile-toggle-btn {
@@ -405,40 +406,276 @@ main {
     position: absolute;
     top: 20px;
     right: 10px;
+    display: none;
   }
 
   #logo {
-    display: none;
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
   }
 
   #artist-cards{
     flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 440px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -15px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.5rem;
+    transform: translateX(-10px);
+  }
+
+  #artist-list {
+    width: 420px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.25rem;
+  }
+} 
+
+@media screen and (max-width: 650px) and (min-width: 601px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 400px;
+    padding-top: 10px;
+  }
+
+  #artist-pic {
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -15px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.55rem;
+    transform: translateX(-10px);
+  }
+
+  #artist-list {
+    width: 400px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.3rem;
+  }
+} 
+
+@media screen and (max-width: 600px) and (min-width: 551px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
   }
 
   #artist {
     height: 300px;
-    width: 250px;
+    width: 350px;
     padding-top: 10px;
-    transform: translateX(-90px);
   }
 
   #artist-pic {
     width: 135px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
-    transform: translateX(-10px);
+    transform: translate(-10px, -10px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.5rem;
+    transform: translate(-10px, 10px);
+  }
+
+  #artist-list {
+    width: 350px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.25rem;
+  }
+} 
+
+@media screen and (max-width: 550px) and (min-width: 501px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 300px;
+    width: 300px;
+    padding-top: 10px;
+  }
+
+  #artist-pic {
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -10px);
   }
   
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
     font-size: 1.3rem;
-    transform: translateX(-10px);
+    transform: translate(-10px, 10px);
   }
 
   #artist-list {
-    width: 250px;
-    transform: translateX(-90px);
+    width: 300px;
   }
 
   #songlist {
@@ -449,7 +686,7 @@ main {
 
 
 /* --- MOBILE VIEWPORTS --- */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 481px){
   #sidenav {
     width: 100%;
     font-size: 2rem;
@@ -477,12 +714,73 @@ main {
 
   #artist-cards{
     flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 250px;
+    width: 430px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 140px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, 0px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translate(-10px, 8px);
+    font-size: 1.5rem;
+  }
+
+  #artist-list {
+    width: 430px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 451px){
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
   }
 
   #artist {
     height: 200px;
-    width: 350px;
-    transform: translateX(-255px);
+    width: 405px;
     margin-top: 70px;
   }
 
@@ -501,13 +799,317 @@ main {
   }
 
   #artist-list {
-    width: 350px;
-    transform: translateX(-255px);
+    width: 405px;
   }
 
   #songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 450px) and (min-width: 421px){
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 200px;
+    width: 380px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 125px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-15px, 9px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translate(-15px, 0px);
+    font-size: 1.35rem;
+  }
+
+  #artist-list {
+    width: 380px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 420px) and (min-width: 381px){
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 200px;
+    width: 350px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-13px, 13px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translateX(-13px);
+    font-size: 1.35rem;
+  }
+
+  #artist-list {
+    width: 350px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 380px) and (min-width: 351px){
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 200px;
+    width: 320px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-17px, 9px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translate(-10px, -3px);
+    font-size: 1.25rem;
+  }
+
+  #artist-list {
+    width: 320px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 350px) and (min-width: 321px){
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 200px;
+    width: 290px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-17px, 13px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translate(-10px, -3px);
+    font-size: 1.2rem;
+  }
+
+  #artist-list {
+    width: 290px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #sidenav {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-255px);
+  }
+
+  #artist {
+    height: 200px;
+    width: 260px;
+    margin-top: 70px;
+  }
+
+  #artist-pic {
+    width: 110px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-17px, 13px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translate(-10px, -3px);
+    font-size: 1.2rem;
+  }
+
+  #artist-list {
+    width: 260px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.15rem;
   }
 }
 /* --- RESPONSIVITY END --- */
