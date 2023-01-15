@@ -32,18 +32,42 @@ main {
 
 /* --- SIDENAV START --- */
 #sidenav {
-  height: 100%;
-  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  overflow-x: hidden;
-  padding-top: 25px;
-  z-index: 1;
-  font-size: 1.12rem;
-  background: rgba(33, 33, 33, 0.9);
-  box-shadow: 1px 0 10px 2px black;
+  height: 100%;
+  width: 300px;
+  background-color: #f1f1f1;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
+
+#sidenav.active {
+  transform: translateX(0%);
+}
+
+#mobile-toggle-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* Media query to change the sidebar to hamburger menu when screen width is 450px or less */
+@media screen and (max-width: 450px) {
+  #sidenav {
+    width: 100%;
+  }
+  #mobile-toggle-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+
+
+
+
 
 #logo {
   width: 100%;
@@ -56,10 +80,6 @@ main {
   position: relative;
   left: 30px;
   margin-bottom: 10px;
-}
-
-#logo svg:hover, #logo-line {
-  cursor: pointer;
 }
 
 #logo-line {
@@ -146,8 +166,6 @@ main {
 
 
 /* --- ARTIST SECTION STYLES START --- */
-
-
 #artist {
   background: rgba(33, 33, 33, 0.9);
   height: 420px;
@@ -306,7 +324,23 @@ main {
 /* --- LOADING SCREEN ANIMATION END --- */
 
 
+/* --- MOBILE BUTTON START --- */
+#mobile-toggle-btn {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  aspect-ratio: 1;
+  background: url(../images/logo-btn-modified.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-style: none;
+}
+/* --- MOBILE BUTTON START --- */
+
+
 /* --- RESPONSIVITY START --- */
+/* --- DESKTOP VIEWPORTS --- */
 @media screen and (max-width: 1310px) and (min-width: 911px) {
   #artist-cards{
     flex-wrap: wrap;
@@ -319,12 +353,126 @@ main {
   #songlist {
     padding: 25px 0 0 0;
   }
-}
 
-@media screen and (max-width: 910px) and (min-width: 500px) {
-  #artist {
-    height: 120px;
-    width: 100px;
+  #mobile-toggle-btn {
+    display: none;
   }
 }
+
+
+/* --- TABLET VIEWPORTS --- */
+@media screen and (max-width: 910px) and (min-width: 451px) {
+  #artist-cards{
+    flex-wrap: wrap;
+  }
+
+  #artist {
+    height: 320px;
+    width: 500px;
+    padding-top: 10px;
+  }
+
+  #artist-pic {
+    width: 190px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  #artist-list {
+    width: 500px;
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+  }
+
+  #mobile-toggle-btn {
+    display: none;
+  }
+}
+
+
+/* --- MOBILE VIEWPORTS --- */
+@media screen and (max-width: 450px) {
+  /* #sidenav {
+    display: none;
+    backdrop-filter: blur(15px);
+  } */
+
+  #sidenav {
+    width: 100%;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 115px;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #logo {
+    display: none;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+  }
+
+  #artist {
+    height: 200px;
+    width: 350px;
+    transform: translateX(-255px);
+    margin-top: 25px;
+  }
+
+  #artist-pic {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, 8px)
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    transform: translateX(-10px);
+  }
+
+  #artist-list {
+    width: 350px;
+    transform: translateX(-255px);
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+  }
+}
+
+
 /* --- RESPONSIVITY END --- */
