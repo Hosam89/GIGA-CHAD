@@ -14,8 +14,9 @@
 //     }
 // });
 
-const sidenav = document.getElementById('sidenav');
+const sideNav = document.getElementById('sidenav');
 const navBtn = document.getElementById('mobile-toggle-btn');
+const logoLine = document.getElementById('logo-line');
 let visible = false; 
 
 // navBtn.addEventListener('click', () => {
@@ -33,15 +34,16 @@ let visible = false;
 
 navBtn.addEventListener("click", () => {
   visible = !visible;
-  sidenav.classList.toggle("active");
+  sideNav.classList.toggle("active");
 });
 
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 451) {
-    sidenav.classList.add("active");
+    sideNav.classList.add("active");
+    logoLine.classList.toggle("active");
     visible = true;
   } else {
-    sidenav.classList.remove("active");
+    sideNav.classList.remove("active");
     visible = false;
   }
 });
