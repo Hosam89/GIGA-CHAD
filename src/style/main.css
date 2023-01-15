@@ -320,7 +320,6 @@ main {
   width: 80px;
   aspect-ratio: 1;
   background: url(../images/logo-sm.svg);
-  zoom: 20%;
   background-position: center;
   background-repeat: no-repeat;
   border-style: none;
@@ -330,7 +329,7 @@ main {
 
 /* --- RESPONSIVITY START --- */
 /* --- DESKTOP VIEWPORTS --- */
-@media screen and (max-width: 1310px) and (min-width: 911px) {
+@media screen and (max-width: 1100px) and (min-width: 1041px) {
   #artist-cards{
     flex-wrap: wrap;
   }
@@ -348,43 +347,615 @@ main {
   }
 }
 
-/* --- TABLET VIEWPORTS --- */
-@media screen and (max-width: 910px) and (min-width: 701px) {
+@media screen and (max-width: 1600px) and (min-width: 1445px) {
+  #sidenav {
+    width: 300px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.25rem;
+  }
+
+  /* #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  } */
+
+  /* #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  } */
+
+  #logo-line span {
+    font-size: 2rem;
+  }
+
   #artist-cards{
     flex-wrap: wrap;
+    transform: translateX(60px);
   }
 
   #artist {
-    height: 320px;
-    width: 6000px;
+    height: 400px;
+    width: 600px;
     padding-top: 10px;
+    
   }
 
   #artist-pic {
-    width: 190px;
+    width: 280px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(0px, 0px);
   }
   
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
+    font-size: 2.2rem;
+    transform: translate(0px, 0px);
   }
 
   #artist-list {
-    width: 500px;
+    width: 600px;
+    
   }
 
   #songlist {
     padding: 25px 0 0 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  #sidenav {
+    width: 300px;
   }
 
-  #mobile-toggle-btn {
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.25rem;
+  }
+
+  /* #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
     display: none;
+  } */
+
+  /* #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  } */
+
+  #logo-line span {
+    font-size: 2rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(60px);
+  }
+
+  #artist {
+    height: 420px;
+    width: 450px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 220px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(0px, -5px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 2.2rem;
+    transform: translate(0px, 10px);
+  }
+
+  #artist-list {
+    width: 340px;
+    
+  }
+
+  #songlist {
+    padding: 0 0 0 15px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 901px) {
+  #sidenav {
+    width: 300px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.25rem;
+  }
+
+  /* #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  } */
+
+  /* #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  } */
+
+  #logo-line span {
+    font-size: 2rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(60px);
+  }
+
+  #artist {
+    height: 400px;
+    width: 600px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 280px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(0px, 0px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 2.2rem;
+    transform: translate(0px, 0px);
+  }
+
+  #artist-list {
+    width: 600px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.2rem;
   }
 }
 
 
+/* --- TABLET VIEWPORTS --- */
+@media screen and (max-width: 900px) and (min-width: 831px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 375px;
+    width: 660px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -3px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 2.45rem;
+    transform: translate(-10px, 3px);
+  }
+
+  #artist-list {
+    width: 660px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.45rem;
+  }
+} 
+
+@media screen and (max-width: 830px) and (min-width: 781px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 600px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -2px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 2.2rem;
+    transform: translate(-10px, 3px);
+  }
+
+  #artist-list {
+    width: 600px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.45rem;
+  }
+} 
+
+@media screen and (max-width: 780px) and (min-width: 751px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 550px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -10px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.95rem;
+    transform: translate(-10px, 10px);
+  }
+
+  #artist-list {
+    width: 550px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.45rem;
+  }
+} 
+
+@media screen and (max-width: 750px) and (min-width: 701px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 500px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -10px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.75rem;
+    transform: translate(-10px, 10px);
+  }
+
+  #artist-list {
+    width: 500px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.4rem;
+  }
+} 
+
+@media screen and (max-width: 700px) and (min-width: 671px) {
+  #sidenav {
+    width: 200px;
+  }
+
+  #sidenav a:first-of-type {
+    margin-top: 80px;
+  }
+
+  #sidenav a {
+    padding: 20px 0 20px 42px;
+    font-size: 1.2rem;
+  }
+
+  #mobile-toggle-btn {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  #logo svg {
+    transform: translateX(30px);
+  }
+
+  #logo-line {
+    transform: translateX(-15px);
+  }
+
+  #logo-line span {
+    font-size: 2.5rem;
+  }
+
+  #artist-cards{
+    flex-wrap: wrap;
+    transform: translateX(-90px);
+  }
+
+  #artist {
+    height: 320px;
+    width: 470px;
+    padding-top: 10px;
+    
+  }
+
+  #artist-pic {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+    transform: translate(-10px, -12px);
+  }
+  
+  #artist-name{
+    color: #e2f0ff;
+    text-shadow: 2px 2px 5px black;
+    font-size: 1.7rem;
+    transform: translate(-10px, 9px);
+  }
+
+  #artist-list {
+    width: 470px;
+    
+  }
+
+  #songlist {
+    padding: 25px 0 0 0;
+    font-size: 1.35rem;
+  }
+} 
 
 @media screen and (max-width: 670px) and (min-width: 651px) {
   #sidenav {
@@ -438,27 +1009,27 @@ main {
   }
 
   #artist-pic {
-    width: 150px;
+    width: 170px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
-    transform: translate(-10px, -15px);
+    transform: translate(-10px, -5px);
   }
   
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
-    font-size: 1.5rem;
-    transform: translateX(-10px);
+    font-size: 1.7rem;
+    transform: translate(-10px, 5px);
   }
 
   #artist-list {
-    width: 420px;
+    width: 440px;
     
   }
 
   #songlist {
     padding: 25px 0 0 0;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
   }
 } 
 
@@ -513,7 +1084,7 @@ main {
   }
 
   #artist-pic {
-    width: 160px;
+    width: 150px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
     transform: translate(-10px, -15px);
@@ -522,8 +1093,8 @@ main {
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
-    font-size: 1.55rem;
-    transform: translateX(-10px);
+    font-size: 1.6rem;
+    transform: translate(-10px, 15px);
   }
 
   #artist-list {
@@ -664,14 +1235,14 @@ main {
     width: 120px;
     border-radius: 50%;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
-    transform: translate(-10px, -10px);
+    transform: translate(-10px, -20px);
   }
   
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
     font-size: 1.3rem;
-    transform: translate(-10px, 10px);
+    transform: translate(-10px, 20px);
   }
 
   #artist-list {
@@ -794,7 +1365,7 @@ main {
   #artist-name{
     color: #e2f0ff;
     text-shadow: 2px 2px 5px black;
-    transform: translateX(-10px);
+    transform: translate(-10px, 7px);
     font-size: 1.4rem;
   }
 
