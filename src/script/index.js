@@ -6,6 +6,21 @@ const songs_cards = document.querySelector('#song-cards');
 const artist_cards = document.querySelector('#artist-cards');
 const searchContainer =  document.querySelector('#search-container')
 
+const mainArtistImage = document.querySelector('#artist-pic');
+const mainArtistName = document.querySelector('#artist-name');
+const mainLinstSong = document.querySelectorAll('.songs');
+window.onload =async ()=>{
+    const lastSearched = await getData(`search?q=${localStorage.getItem('searched')}`);
+    const artistInfo = await lastSearched.data
+    mainArtistImage.src = artistInfo[0].artist.picture_big
+    mainArtistName.innerText = artistInfo[0].artist.name
+    mainLinstSong.forEach((song , index) =>{
+        song.firstChild.src = artistInfo[index].artist.picture_xl;
+        song.lastChild.innerText = artistInfo[index].title
+    })
+}
+
+
 homebutton.addEventListener('click' , ()=>{
     cardsContainer.innerHTML = atristLayout;
 
@@ -74,8 +89,8 @@ homebutton.addEventListener('click' , ()=>{
                 const playList = document.createElement('ul');
                 playList.classList.add('list-group')
                 const playListItem = document.createElement('li')
-                for(let i = 0 ; i<=10 ; i++){
-                    playList.innerHTML+= `<li class="list-group-item text-light bg-dark"> ${artistInfo[i].title}</li>`
+                for(let i = 0 ; i<=5 ; i++){
+                    playList.innerHTML+= `<li class="songs d-flex"> <img src='${artistInfo[i].artist.picture_xl}' class="album-pic"> <a href="${artistInfo[i].preview}" target="_blank"> ${artistInfo[i].title}</br><span class="title">${artistInfo[i].artist.name}</span></a> </li>`
                     // playListItem.innerText += artistInfo[i].title
                     // playList.append(playListItem)
                 }
