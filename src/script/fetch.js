@@ -1,8 +1,8 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'ac0dbb8156msh9a497bbaae70c47p104afajsnc99d338c5a28',
-		'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+		'X-RapidAPI-Key': secret_Key,
+		'X-RapidAPI-Host': secret_Host
 	}
 };
 
