@@ -4,14 +4,14 @@ const image = document.querySelector('.artistImage')
 
 
 const audio = new Audio();
-audio.src = "Pool mit den lokalen Daten, die der User hören möchte";
+
 let run = document.querySelector('.run');
 let stop = "stop";
 
 console.log(localStorage.getItem('searched'));
 
 run.addEventListener('click', async () => {
-    const data = await getData('search?q=santana');
+    const data = await getData(`search?q=${localStorage.getItem('searched')}`);
     const artistInfo = await data.data;
     if(stop === "stop") {
     run.innerHTML = '<i class="fa fa-pause"></i>';
