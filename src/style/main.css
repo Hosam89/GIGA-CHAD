@@ -158,15 +158,67 @@ a {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  gap: 30px;
-  padding-left: 30px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
 }
+
+#artist:hover {
+  background: linear-gradient(
+    120deg,
+    rgb(33, 33, 33, 0.7) 0%,
+    rgb(127, 110, 132, 0.7) 20%,
+    rgb(230, 186, 209) 40%,
+    rgb(255, 255, 255) 50%,
+    rgb(230, 186, 209) 60%,
+    rgb(127, 110, 132, 0.7) 80%,
+    rgb(33, 33, 33, 0.7) 100%
+  );
+}
+
+#artist-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .fa-play {
+  font-family: fontAwesome;
+  font-size: 3.5rem;
+  color: #e2f0ff;
+  text-shadow: 2.5px 2.5px 8.5px rgba(0, 0, 0, 0.85);
+  transition: all ease 0.2s;
+  margin-left: 80px;
+} */
+
+/* .fa-play:hover {
+  text-shadow: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+    160deg,
+    #e2f0ff 0%,
+    #029e83 30%,
+    #006973 55%,
+    #003236 66%,
+    #000000 100%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+} */
+
+/* .fa-play:active {
+  font-size: 2.9rem;
+} */
 
 #artist-pic {
   width: 250px;
   border-radius: 50%;
-  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.8);
 }
 
 #artist-name{
@@ -188,6 +240,7 @@ a {
 
 #artist, .songs {
   border-radius: 7.5px;
+  transition: all ease 0.4s;
 }
 
 .songs {
@@ -199,7 +252,7 @@ a {
   color: #e2f0ff;
 }
 
-.songs:hover, #songs-cards .card:hover, #albums-cards .card:hover {
+.songs:hover, #songs-cards .card:hover, #album-cards .card:hover {
   background: linear-gradient(
     120deg,
     rgb(33, 33, 33, 0.7) 0%,
@@ -307,6 +360,314 @@ a {
   filter: blur(30px);
 }
 /* --- LOADING SCREEN ANIMATION END --- */
+
+
+/* --- MUSIC PLAYER START --- */
+  /* #player {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(33, 33, 33, 0.9);
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    gap: 100px;
+    color: #e2f0ff;
+  }
+  
+  #track-credentials {
+    display: flex;
+    width: 50%;
+  }
+
+  #track-credentials, #song-img, #player-info, .player-img {
+    height: 100%;
+  }
+
+  .player-img {
+    border-radius: 50%;
+  }
+
+  #player-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  #player-navigation {
+
+  }
+
+  #player-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .progress {
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar {	
+    height: 8px;
+    background-color: #ee303c;  
+    border-radius: 10px; 
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-striped .progress-bar { 	
+    background-color: #FCBC51; 
+    width: 100%; 
+    background-image: linear-gradient(
+      100deg,
+      rgb(255, 255, 255) 0%,
+      rgb(2, 158, 131) 20%,
+      rgb(0, 105, 115) 40%,
+      rgb(0, 50, 54) 60%,
+      rgb(6, 54, 72) 70%,
+      rgb(33, 33, 33) 100%
+    );
+    animation: progressAnimationStrike 30s;
+  }
+  
+  @keyframes progressAnimationStrike {
+       from { width: 0 }
+       to   { width: 100% }
+  } */
+
+  .music-player {
+    --primary-color: #e2f0ff;
+    --secondary-color: #999;
+    --padding: 1rem;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: 150px;
+    padding: var(--padding);
+    color: var(--primary-color);
+}
+i{
+    color: var(--secondary-color);
+}
+i:hover{
+    color: var(--primary-color);
+}
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.image-container {
+    --size: 5rem;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.song-description p {
+    margin: 0.2rem;
+}
+.title,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+.artist{
+    color: var(--secondary-color);
+}
+.icons{
+    display: flex;
+    gap: 1rem;
+}
+.progress-controller{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--secondary-color);
+}
+.control-buttons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+.play-pause{
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #111;
+    border-radius: 50%;
+}
+.play-pause:hover{
+    transform: scale(1.1);
+    color: #111;
+}
+.progress-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.progress-bar{
+    height: 8px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #333333;
+}
+.progress{
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      100deg,
+      rgb(255, 255, 255) 0%,
+      rgb(2, 158, 131) 20%,
+      rgb(0, 105, 115) 40%,
+      rgb(0, 50, 54) 60%,
+      rgb(6, 54, 72) 70%,
+      rgb(33, 33, 33) 100%
+    );
+    animation: progressAnimationStrike 30s;
+}
+
+.progress-bar:hover .progress::after{
+    content: "";
+    position: absolute;
+    --size: 1rem;
+    width: var(--size);
+    height: var(--size);
+    right: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(50%, calc(2px - 50%));
+}
+.other-features{
+    position: absolute;
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.volume-bar{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+.volume-bar .progress-bar{
+    width: 6rem;
+}
+
+.volume-btn {
+  background-color: transparent;
+  height: 15px;
+}
+
+ #volume-adjust {
+  background: transparent;
+ }
+
+
+/* COMPATIBILITY SEIN VATER */
+input[type="range"]::-moz-range-progress {
+  background: linear-gradient(
+    100deg,
+    rgb(255, 255, 255) 0%,
+    rgb(2, 158, 131) 20%,
+    rgb(0, 105, 115) 40%,
+    rgb(0, 50, 54) 60%,
+    rgb(6, 54, 72) 70%,
+    rgb(33, 33, 33) 100%
+  );
+}
+input[type="range"]::-moz-range-track {  
+  background-color: var(--secondary-color);
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background: linear-gradient(
+    100deg,
+    rgb(255, 255, 255) 0%,
+    rgb(2, 158, 131) 20%,
+    rgb(0, 105, 115) 40%,
+    rgb(0, 50, 54) 60%,
+    rgb(6, 54, 72) 70%,
+    rgb(33, 33, 33) 100%
+  );
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1.5px solid black;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: -14px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  background-color: #e2f0ff;
+  cursor: pointer;
+  margin-top: -14px;
+}
+
+
+
+
+
+
+
+
+
+/* --- MUSIC PLAYER END --- */
+
+
+
 
 
 /* --- MOBILE BUTTON START --- */
@@ -421,6 +782,10 @@ a {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1101px) {
+  cards-container {
+    width: auto;
+  }
+
   #sidenav {
     width: 300px;
   }
@@ -1803,3 +2168,8 @@ a {
   }
 }
 /* --- RESPONSIVITY END --- */
+
+@keyframes progressAnimationStrike {
+  from { width: 0 }
+  to   { width: 100% }
+}
