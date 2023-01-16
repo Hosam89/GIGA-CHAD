@@ -1,6 +1,6 @@
 const seachPage = document.querySelector("#search");
 const cardsContainer = document.querySelector('#cards-container');
-const atristLayout = cardsContainer.innerHTML
+const atristLayout = cardsContainer.innerHTML;
 const homebutton = document.querySelector('#home');
 const songs_cards = document.querySelector('#song-cards');
 const artist_cards = document.querySelector('#artist-cards');
