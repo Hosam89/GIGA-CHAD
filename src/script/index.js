@@ -13,9 +13,15 @@ const mainLinstSong = document.querySelectorAll('.songs');
 const favArray = []
 const artistArray = ['petergabriel' , 'genesis' ,'bonnietyler' , 'barrywhite' , 'againstthemall' , 'selenagomez','ninachuba' , 'theweekend' , 'calumscott' , 'vitas' , 'annenmaykantereit' , 'wafikhabib' , 'myriamfares' , 'asereje']
 const randomNumber = Math.floor(Math.random() * artistArray.length);
-
-const albumContainer = document.querySelector('#album-cards')
+const audio = new Audio();
+const albumContainer = document.querySelector('#album-cards');
 const klicked = true;
+
+
+let playerSmallPP = document.querySelector('.image-container > img');
+const songTitleSmallPP = document.querySelector('.song-description > p');
+const artistNamePP = document.querySelector('.artist')
+
 window.onload =async ()=>{
     const lastSearched = await getData(`search?q=${localStorage.getItem('searched')}`);
     const artistInfo = await lastSearched.data
@@ -95,9 +101,52 @@ homebutton.addEventListener('click' , ()=>{
                 const playList = document.createElement('ul');
                 playList.classList.add('songlist')
               
+
                 artistInfo.forEach((atrist , index)=>{
                     if(index <= 4){
                         const playListItem = document.createElement('li');
+                        playListItem.addEventListener('click' ,()=>{
+                            audio.src = artistInfo[index].preview;
+                            songTitleSmallPP.innerText = artistInfo[index].title;
+                                playerSmallPP.src = artistInfo[index].artist.picture_big;
+                                artistNamePP.innerText = artistInfo[index].artist.name;
+                               
+                            mute.addEventListener('click' , ()=>{
+                                
+                                if(mute.classList.contains('fa-volume-down')){
+                                    audio.volume = 0;
+                                    mute.classList.remove('fa-volume-down');
+                                    mute.classList.add('fa-volume-xmark')
+                                }else{
+                                    audio.volume = parseFloat(volume1.value)
+                                    mute.classList.add('fa-volume-down');
+                                    mute.classList.remove('fa-volume-xmark')
+                                }
+                            })
+                            console.log(typeof parseFloat(volume1.value));
+                            const progBar = document.querySelector('.progress').animate([{width : '0%'} , {width: '100%'}],{duration : 30000 ,  iterations: 1} )
+                            audio.play(); 
+                            progBar.play()
+                            volume1.addEventListener('change' , ()=>{
+                                audio.volume = parseFloat(volume1.value)
+                             })
+                            play.classList.remove('fa-play');
+                            play.classList.add('fa-pause')
+                           console.log(audio.src);
+                            play.addEventListener('click' , ()=>{
+                                if(play.classList.contains('fa-pause')){
+                                    audio.pause();
+                                    progBar.pause()
+                                    play.classList.add('fa-play');
+                                    play.classList.remove('fa-pause')
+                                }else{
+                                    play.classList.remove('fa-play');
+                                    play.classList.add('fa-pause');
+                                    audio.play()
+                                    progBar.play()
+                                }
+                            })
+                        })
                         playListItem.classList.add('songs' , 'd-flex' , 'p-2');
                         playListItem.style.verticalAlign = 'top'
                         playListItem.style.fontSize = "1.2rem"
@@ -226,8 +275,50 @@ favPage.addEventListener('click' , async ()=>{
             const listItem = document.createElement('li');
             listItem.classList.add('songs');
             const trackInfo = await getData(`track/${item}`);
-      
-            
+            console.log(trackInfo);
+
+
+            listItem.addEventListener('click' , ()=>{
+
+            playerSmallPP.src = trackInfo.artist.picture_big;
+            songTitleSmallPP.innerText = trackInfo.title;
+            artistNamePP.innerText = trackInfo.artist.name
+                audio.src = trackInfo.preview;
+                mute.addEventListener('click' , ()=>{
+                    
+                    if(mute.classList.contains('fa-volume-down')){
+                        audio.volume = 0;
+                        mute.classList.remove('fa-volume-down');
+                        mute.classList.add('fa-volume-xmark')
+                    }else{
+                        audio.volume = parseFloat(volume1.value)
+                        mute.classList.add('fa-volume-down');
+                        mute.classList.remove('fa-volume-xmark')
+                    }
+                })
+                const progBar = document.querySelector('.progress').animate([{width : '0%'} , {width: '100%'}],{duration : 30000 ,  iterations: 1} )
+                audio.play();
+                progBar.play()
+                volume1.addEventListener('change' , ()=>{
+                    audio.volume = parseFloat(volume1.value)
+                 })
+                play.classList.remove('fa-play');
+                play.classList.add('fa-pause')
+             
+                play.addEventListener('click' , ()=>{
+                    if(play.classList.contains('fa-pause')){
+                        audio.pause();
+                        progBar.pause();
+                        play.classList.add('fa-play');
+                        play.classList.remove('fa-pause')
+                    }else{
+                        play.classList.remove('fa-play');
+                        play.classList.add('fa-pause');
+                        audio.play();
+                        progBar.play()
+                    }
+                })
+            })
             listImag.src = trackInfo['artist'].picture_big;
             artist.innerText = trackInfo['artist'].name;
             songtitle.innerText = trackInfo.title;
