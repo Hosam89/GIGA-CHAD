@@ -26,6 +26,7 @@
       <!-- <img src="../images/logo.svg" alt="" srcset="" width="200px" height="200px"> -->
 
 
+
       <!-- --- SIDENAV START --- -->
       <div id="sidenav">
 
@@ -136,8 +137,10 @@
         <a href="#" id="search"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;&nbsp;&nbsp;Search</a>
         <a href="#" id="favorites"><i class="fa-solid fa-poo"></i>&nbsp;&nbsp;&nbsp;&nbsp;Favorites</a>
         <a href="../index.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
-        <!-- --- SIDENAV END --- -->
       </div>
+      <!-- --- SIDENAV END --- -->
+
+
 
       <!-- --- MOBILE LOGO NAVTOGGLE START --- -->
         <button id="mobile-toggle-btn"> 
@@ -173,7 +176,7 @@
             </div>
 
             <div id="artist-body">
-              <h1 id="artist-name">The Jumpsuit Apparatus</h1>
+              <h1 id="artist-name">TEminem le bigeerer</h1>
             </div>
           </div>
 
@@ -189,8 +192,8 @@
                 <span class="title">Song Title</span></li>
               <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
                 <span class="title">Song Title</span></li>
-              <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
-                <span class="title">Song Title</span></li>
+              <!-- <li class="songs"><img src="../images/sigma-2.gif" alt="..." class="album-pic">
+                <span class="title">Song Title</span></li> -->
             </ul>
           </div>
 
@@ -214,57 +217,28 @@
 
 
     <!-- --- PLAYER SECTION START --- -->
-    <!-- <section id="player">
-
-
-    <div id="track-credentials">
-      <div id="song-img">
-        <img src="/src/images/sigma-1.gif" alt="..." class="player-img">
-      </div>
-
-        <div id="player-info">
-          <h3 class="player-title">Song-Title</h3>
-
-          <p class="player-artist">Song-Artist</p>
-        </div>
-      </div>
-
-      <div id="player-navigation">
-        <div id="player-buttons">
-          <div><button class = "like"><i class="fa-solid fa-heart"></i></button></div>
-          <div><button class = "previus"><i class="fa-solid fa-backward"></i></button></div>
-          <div><button class = "run"><i class="fa-solid fa-play"></i></button></div>
-          <div><button class = "next"><i class="fa-solid fa-forward"></i></button></div>
-          <div><button class = "onceMore"><i class="fa-solid fa-repeat"></i></button></div>
-        </div>
-
-        <div class="progress progress-striped">
-          <div class="progress-bar">
-          </div>                       
-        </div>
-      </div>
-
-
-      </section> -->
-
       <div class="music-player">
+
         <div class="song-bar">
             <div class="song-infos">
                 <div class="image-container">
                     <img src="https://d2y6mqrpjbqoe6.cloudfront.net/image/upload/f_auto,q_auto/media/library-400/216_636967437355378335Your_Lie_Small_hq.jpg" alt="" />
                 </div>
+
                 <div class="song-description">
-                    <p class="title">
+                    <p class="title none">
                         Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
                     </p>
-                    <p class="artist">Masaru Yokoyama</p>
+                    <p class="artist none">Masaru Yokoyama</p>
                 </div>
             </div>
+
             <div class="icons">
                 <i class="far fa-heart"></i>
                 <i class="fas fa-compress"></i>
             </div>
         </div>
+
         <div class="progress-controller">
             <div class="control-buttons">
                 <i class="fas fa-random"></i>
@@ -273,6 +247,7 @@
                 <i class="fas fa-step-forward"></i>
                 <i class="fas fa-undo-alt"></i>
             </div>
+
             <div class="progress-container">
                 <span>0:00</span>
                 <div class="progress-bar">
@@ -281,6 +256,7 @@
                 <span>0:30</span>
             </div>
         </div>
+
         <div class="other-features">
             <i class="fas fa-list-ul"></i>
             <i class="fas fa-desktop"></i>
@@ -303,6 +279,7 @@
     <script src="/src/script/nav.js"></script>
     <script src="/src/script/env.js"></script>
     <script src="/src/script/fetch.js"></script>
+    <script src="/src/script/music.js"></script>
     <script src="/src/script/index.js"></script>
   </body>
 </html>
