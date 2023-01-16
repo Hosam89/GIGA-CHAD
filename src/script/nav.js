@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
   } else {
     sideNav.classList.remove("active");
     visible = false;
-    sideNav.style.transition = 'transform 0.3s ease-in-out'
+
     // transition: transform 0.3s ease-in-out;
   }
 });
