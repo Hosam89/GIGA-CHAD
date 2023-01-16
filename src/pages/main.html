@@ -156,7 +156,6 @@
 
 
 
-      
         <!-- --- SONG SECTION START --- -->
         <section id="song-cards" class="d-flex justify-content-start align-items-start flex-wrap gap-4 d-none">
         </section>
@@ -168,9 +167,13 @@
         <section id="artist-cards" class="d-flex justify-content-start align-items-start">
 
           <div id="artist">
-            <img id="artist-pic" src="../images/sigma-2.gif" class="card-img-top" alt="current-artist" />
+            <div id="artist-head">
+              <img id="artist-pic" src="../images/sigma-2.gif"  class="card-img-top" alt="current-artist" />
+              <!-- <i class="fa-solid fa-play"></i> -->
+            </div>
+
             <div id="artist-body">
-              <h1 id="artist-name">We Butter The Bread With Butter</h1>
+              <h1 id="artist-name">The Jumpsuit Apparatus</h1>
             </div>
           </div>
 
@@ -204,7 +207,92 @@
 
 
 
+
       </div>
+      <!-- --- CONTENT END --- -->
+
+
+
+    <!-- --- PLAYER SECTION START --- -->
+    <!-- <section id="player">
+
+
+    <div id="track-credentials">
+      <div id="song-img">
+        <img src="/src/images/sigma-1.gif" alt="..." class="player-img">
+      </div>
+
+        <div id="player-info">
+          <h3 class="player-title">Song-Title</h3>
+
+          <p class="player-artist">Song-Artist</p>
+        </div>
+      </div>
+
+      <div id="player-navigation">
+        <div id="player-buttons">
+          <div><button class = "like"><i class="fa-solid fa-heart"></i></button></div>
+          <div><button class = "previus"><i class="fa-solid fa-backward"></i></button></div>
+          <div><button class = "run"><i class="fa-solid fa-play"></i></button></div>
+          <div><button class = "next"><i class="fa-solid fa-forward"></i></button></div>
+          <div><button class = "onceMore"><i class="fa-solid fa-repeat"></i></button></div>
+        </div>
+
+        <div class="progress progress-striped">
+          <div class="progress-bar">
+          </div>                       
+        </div>
+      </div>
+
+
+      </section> -->
+
+      <div class="music-player">
+        <div class="song-bar">
+            <div class="song-infos">
+                <div class="image-container">
+                    <img src="https://d2y6mqrpjbqoe6.cloudfront.net/image/upload/f_auto,q_auto/media/library-400/216_636967437355378335Your_Lie_Small_hq.jpg" alt="" />
+                </div>
+                <div class="song-description">
+                    <p class="title">
+                        Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
+                    </p>
+                    <p class="artist">Masaru Yokoyama</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-compress"></i>
+            </div>
+        </div>
+        <div class="progress-controller">
+            <div class="control-buttons">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="play-pause fas fa-play"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-undo-alt"></i>
+            </div>
+            <div class="progress-container">
+                <span>0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span>0:30</span>
+            </div>
+        </div>
+        <div class="other-features">
+            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-desktop"></i>
+            <div class="volume-bar">
+                <i class="fas fa-volume-down"></i>
+                <div class="progress-bar volume-btn">
+                    <input id="volume-adjust" type="range" min="1" max="10" step="1" value="5">
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- --- PLAYER SECTION END --- -->
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
