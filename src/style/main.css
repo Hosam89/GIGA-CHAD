@@ -887,11 +887,3 @@ background: transparent;
 /* --- RESPONSIVITY END --- */
 
 
-
-/* --- KEYFRAMES CORNER --- */
-@keyframes progressAnimationStrike {
-  from { width: 0 }
-  to   { width: 100% }
-}
-
-
