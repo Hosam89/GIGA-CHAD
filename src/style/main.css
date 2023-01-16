@@ -656,6 +656,10 @@ input[type=range]::-moz-range-thumb {
     font-size: 2.5rem;
   }
 
+  #album-cards {
+    display: none;
+  }
+
   .songlist {
     gap: 8px;
     padding: 0;
@@ -725,6 +729,10 @@ input[type=range]::-moz-range-thumb {
 
   #artist-name{
     font-size: 2.5rem;
+  }
+
+  #album-cards {
+    display: none;
   }
 
   .songlist {
