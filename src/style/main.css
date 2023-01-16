@@ -30,6 +30,10 @@ main {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --- SIDENAV START --- */
 #sidenav {
   position: fixed;
@@ -182,7 +186,7 @@ main {
   width: 400px;
 }
 
-#songlist {
+.songlist {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -338,7 +342,7 @@ main {
     width: 599px;
   }
   
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
   }
 
@@ -417,7 +421,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
   }
@@ -493,7 +497,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 0 0 0 15px;
     font-size: 1rem;
   }
@@ -569,7 +573,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
   }
@@ -647,7 +651,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.45rem;
   }
@@ -723,7 +727,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.45rem;
   }
@@ -799,7 +803,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.45rem;
   }
@@ -875,7 +879,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.4rem;
   }
@@ -951,7 +955,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.35rem;
   }
@@ -1027,7 +1031,7 @@ main {
     
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.35rem;
   }
@@ -1101,7 +1105,7 @@ main {
     width: 400px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.3rem;
   }
@@ -1175,7 +1179,7 @@ main {
     width: 350px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.25rem;
   }
@@ -1249,7 +1253,7 @@ main {
     width: 300px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.15rem;
   }
@@ -1312,7 +1316,7 @@ main {
     width: 430px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.3rem;
   }
@@ -1373,7 +1377,7 @@ main {
     width: 405px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
   }
@@ -1434,7 +1438,7 @@ main {
     width: 380px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
   }
@@ -1495,7 +1499,7 @@ main {
     width: 350px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.2rem;
   }
@@ -1556,7 +1560,7 @@ main {
     width: 320px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.15rem;
   }
@@ -1617,7 +1621,7 @@ main {
     width: 290px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.15rem;
   }
@@ -1678,7 +1682,7 @@ main {
     width: 260px;
   }
 
-  #songlist {
+  .songlist {
     padding: 25px 0 0 0;
     font-size: 1.15rem;
   }
