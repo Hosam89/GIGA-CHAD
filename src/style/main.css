@@ -740,7 +740,6 @@ input[type=range]::-moz-range-thumb {
     padding: 0;
   }
 
-  /* --- MUSIC PLAYER START --- */
 .music-player {
   width: 100%;
   position: fixed;
@@ -861,14 +860,6 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   background-color: var(--primary-color);
   transform: translate(50%, calc(2px - 50%));
-}
-
-.other-features{
-  position: absolute;
-  right: var(--padding);
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .volume-bar{
