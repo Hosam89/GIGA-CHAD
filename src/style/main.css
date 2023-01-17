@@ -55,7 +55,7 @@ a {
   backdrop-filter: blur(10px);
   box-shadow: 1px 0 10px 2px black;
   transform: translateX(-100%);
-  /* transition: transform 0.3s ease-in-out; */
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -663,6 +663,9 @@ input[type=range]::-moz-range-thumb {
   .songlist {
     gap: 8px;
     padding: 0;
+  }
+  .music-player{
+    width: 100%;
   }
 }
 

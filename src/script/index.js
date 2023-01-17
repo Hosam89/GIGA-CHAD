@@ -11,26 +11,27 @@ const mainArtistImage = document.querySelector('#artist-pic');
 const mainArtistName = document.querySelector('#artist-name');
 const mainLinstSong = document.querySelectorAll('.songs');
 const favArray = []
-const artistArray = ['petergabriel' , 'genesis' ,'bonnietyler' , 'barrywhite' , 'againstthemall' , 'selenagomez','ninachuba' , 'theweekend' , 'calumscott' , 'vitas' , 'annenmaykantereit' , 'wafikhabib' , 'myriamfares' , 'asereje']
+const artistArray = ['dualipa','petergabriel' , 'genesis' ,'bonnietyler' , 'barrywhite' , 'againstthemall' , 'selenagomez','ninachuba' , 'theweekend' , 'calumscott' , 'vitas' , 'annenmaykantereit' , 'wafikhabib' , 'myriamfares' , 'asereje']
 const randomNumber = Math.floor(Math.random() * artistArray.length);
 const audio = new Audio();
 const albumContainer = document.querySelector('#album-cards');
 const klicked = true;
-
-
+const songsimg = document.querySelectorAll('.album-pic')
+const songsTitle = document.querySelectorAll('.title')
 let playerSmallPP = document.querySelector('.image-container > img');
 const songTitleSmallPP = document.querySelector('.song-description > p');
 const artistNamePP = document.querySelector('.artist')
 
 window.onload =async ()=>{
     const lastSearched = await getData(`search?q=${localStorage.getItem('searched')}`);
-    const artistInfo = await lastSearched.data
+    const artistInfo = await lastSearched.data;
+    console.log(artistInfo);
     mainArtistImage.src = artistInfo[0].artist.picture_big
-    mainArtistName.innerText = artistInfo[0].artist.name
-    mainLinstSong.forEach((song , index) =>{
-        song.firstChild.src = artistInfo[index].artist.picture_xl;
-        song.lastChild.innerText = artistInfo[index].title
-    })
+    mainArtistName.innerText = artistInfo[0].artist.name;
+    for(let i = 0 ; i<= 4 ; i++){
+        songsimg[i].src = artistInfo[i].artist.picture_big;
+        songsTitle[i].innerText = artistInfo[i].title
+    }
 }
 
 
@@ -63,11 +64,11 @@ homebutton.addEventListener('click' , ()=>{
         
             searchInput.addEventListener('change' ,async ()=>{
                 
-                const search = searchInput.value.trim().split(' ').join("");
+                const search = searchInput.value.trim().split(' ').join("").toLowerCase();
                 //Save the search Varibale to the LoaclStorage
 
-               window.localStorage.setItem('searched' , search)
                 const data = await  getData(`search?q=${search}`);
+                window.localStorage.setItem('searched' , search)
                
                 const artistInfo = await data.data
              
@@ -147,31 +148,35 @@ homebutton.addEventListener('click' , ()=>{
                                 }
                             })
                         })
-                        playListItem.classList.add('songs' , 'd-flex' , 'p-2');
+                        playListItem.classList.add('songs' , 'd-flex');
                         playListItem.style.verticalAlign = 'top'
-                        playListItem.style.fontSize = "1.2rem"
+                        playListItem.style.fontSize = "1.2rem";
                         const listSongImg = document.createElement('img');
+                        const imgspanContainer = document.createElement('div');
+
                         listSongImg.classList.add('album-pic');
-                        const listSongsTitle = document.createElement('span');
-                        listSongsTitle.style.padding ='20px'
-                        listSongsTitle.style.lineHeight = "9px"
-                        const songName = document.createElement('p')
-                        const artistName = document.createElement('p')
+                        const listSongsTitle = document.createElement('p');
+                        listSongsTitle.classList.add('d-flex' , 'flex-column' , 'gap-2');
+                       listSongsTitle.style.padding ='10px'
+                        listSongsTitle.style.lineHeight = "8px";
+                        listSongsTitle.style.height= '50px'
+                        const songName = document.createElement('span')
+                        const artistName = document.createElement('span')
                         listSongsTitle.style.marginLeft = '10px'
                         listSongsTitle.classList.add('title')
                         listSongImg.src = artistInfo[index].artist.picture_big;
                         songName.innerText =  artistInfo[index].title 
                         artistName.innerText = artistInfo[index].artist.name  ;
                         const likebutton = document.createElement('button');
-                        likebutton.classList.add('align-self-start');
+                        likebutton.classList.add('align-self-end');
                         likebutton.style.background = 'none';
                         likebutton.style.border = 'none';
-                        likebutton.style.float = 'right';
+                   
                         likebutton.style.marginLeft = '6rem';
                         likebutton.style.fontSize = '3rem'
                         const icon = document.createElement('i');
                         icon.classList.add('fa-regular','fa-heart');
-                        likebutton.style.color = 'red';
+                        likebutton.style.color = '#514b5d';
                         likebutton.append(icon)
                         likebutton.addEventListener('click' , ()=>{
                            
@@ -226,7 +231,7 @@ homebutton.addEventListener('click' , ()=>{
     for(let i = 0 ; i < randomArtist.length ; i++){  
         const data = await getData(`search?q=${randomArtist[i]}`);
         const album = await data.data;
-
+      
 
         const card = document.createElement('div');
         card.classList.add('card')
@@ -262,7 +267,7 @@ favPage.addEventListener('click' , async ()=>{
     cardsContainer.innerHTML = " ";
     const listContainer = document.createElement('div');
     const listFav = document.createElement('ul');
-    listFav.classList.add('songlist')
+    listFav.classList.add('songlist');
     
     for(const item in localStorage){
         if(!isNaN(Number(item))){
